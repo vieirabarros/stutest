@@ -1,0 +1,161 @@
+/*
+
+//Desafio 1
+//Version: 1.0
+//Date: 10/25/2019
+//Author: Filipe Barros
+
+
+import java.util.Scanner;
+
+public class Desafio1
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+
+
+    double A=0;
+    System.out.println("\nDigite um numero inteiro");
+	A=input.nextDouble();
+        
+	System.out.println(A+1);        
+   	System.out.println(A-1);
+	   
+}
+
+}
+
+*/
+
+
+
+
+
+/*
+//Desafio 2: Faça um algoritmo que leia a idade(em anos, meses e dias) e mostre-a expressa em dias
+//Date: 10/25/2019
+//Author: Filipe Barros
+
+import java.util.Scanner;
+
+public class Desafio2
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    System.out.println("\nAnos:");
+	int anos=input.nextInt();
+
+    System.out.println("\nMeses:");
+	int meses=input.nextInt();
+    
+    System.out.println("\nDias:");
+	int dias=input.nextInt();
+    
+
+    int idadeDias=anos*365+meses*30+dias;
+    System.out.println("\nVoce tem "+idadeDias+" Dias de vida");
+	   
+}
+
+}
+
+*/
+
+/*
+
+//Desafio 3: Faça um algoritmo que leia a idade(em anos, meses e dias) e mostre-a expressa em dias
+//Date: 10/25/2019
+//Author: Filipe Barros
+
+import java.util.Scanner;
+
+public class Desafio3
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    System.out.println("\nDigite o valor do Raio:");
+	double raio=input.nextDouble();
+	
+    if (raio>=0){
+        double diametro=2*raio;
+        double circunferencia=2*3.14*raio;
+        double area=3.14*Math.pow(raio,2);
+        
+        System.out.println("\nDiametro: "+diametro+"\nCircunferencia: "+circunferencia+"\nArea: "+area);
+    }
+    
+    else {System.out.println("\nValor deve ser um numero maior ou igual a 0");}
+}
+}
+
+*/
+
+
+/*
+//Desafio 5
+//Version: 1.0
+//Date: 10/25/2019
+//Author: Filipe Barros
+
+
+import java.util.Scanner;
+
+public class Desafio1
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+
+
+    double A=0;
+    System.out.println("\nDigite o valor do produto");
+	produto=input.nextDouble();
+
+    System.out.println("\nDigite o desconto em decimal");
+	desconto=input.nextDouble();
+
+	System.out.println(produto*(1-desconto));        
+   	
+}
+
+}
+*/
+
+
+
+/*
+//Desafio 5
+//Version: 1.0
+//Date: 10/25/2019
+//Author: Filipe Barros
+
+
+public class Desafio1
+
+{
+	public static void main(String[] args) {
+
+
+    double media1=(7+8+9)/3;
+    System.out.println(media1);
+
+    double media2=(4+5+6)/3;
+    System.out.println(media2);
+
+    System.out.println(media1+media2);
+
+    System.out.println((media1+media2)/2);
+
+
+}
+
+}
+
+*/
