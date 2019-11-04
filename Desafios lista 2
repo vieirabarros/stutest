@@ -1,0 +1,259 @@
+//1) Fazer um algoritmo que receba três números e imprima-os em ordem crescente.
+import java.util.Scanner;
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    System.out.println("\nDigite tres numeros inteiros");
+    int n1=input.nextInt();
+    int n2=input.nextInt();
+    int n3=input.nextInt();
+
+    
+    
+    if (n1>n2&&n2>n3){   	System.out.println("\n"+n3+"\n"+n2+"\n"+n1);}
+    else if (n1>n3&&n3>n2){   	System.out.println("\n"+n2+"\n"+n3+"\n"+n1);}
+    
+    else if (n2>n1&&n1>n3){   	System.out.println("\n"+n3+"\n"+n1+"\n"+n2);}
+    else if (n2>n3&&n3>n1){   	System.out.println("\n"+n1+"\n"+n3+"\n"+n2);}
+    
+    else if (n3>n2&&n2>n1){   	System.out.println("\n"+n1+"\n"+n2+"\n"+n3);}
+    else if (n3>n1&&n1>n2){   	System.out.println("\n"+n2+"\n"+n1+"\n"+n3);}
+
+	   
+}
+
+}
+
+//__________________________________________________________________________________________
+
+
+/*2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde
+para dar uma indicação sobre a condição de peso de uma pessoa adulta.
+A fórmula é IMC = peso / ( altura )^2 Elabore um algoritmo que leia o peso e a altura de
+um adulto e mostre sua condição de acordo com a tabela abaixo.
+IMC em adultos Condição
+Abaixo de 18,5 Abaixo do peso
+Entre 18,5 e 25 Peso normal
+Entre 25 e 30 Acima do peso
+Acima de 30 obeso
+*/
+import java.util.Scanner;
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    System.out.println("\nDigite tres numeros inteiros");
+    double peso=input.nextDouble();
+    double altura=input.nextDouble();
+
+    double imc=peso/(Math.pow(altura,2));
+    
+    System.out.println("\n"+imc);
+
+    if (imc<18.5){    System.out.println("\nAbaixo do Peso");}
+    else if (18.5<=imc&&imc<25){    System.out.println("\nPeso Normal");}
+	else if (25<=imc&&imc<30){    System.out.println("\nAcima do Peso");}   
+	else if (imc>=30){    System.out.println("\nObeso");}
+}
+
+}
+
+//___________________________________________________________________________________________
+
+
+
+/*3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o
+preço normal de etiqueta e a escolha da condição de pagamento. Utilize os códigos da
+tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo
+adequado.
+Código Condição de pagamento
+1 À vista em dinheiro ou cheque, recebe 10% de desconto
+2 À vista no cartão de crédito, recebe 15% de desconto
+3 Em duas vezes, preço normal de etiqueta sem juros
+4 Em duas vezes, preço normal de etiqueta mais juros de 10%
+*/
+
+import java.util.Scanner;
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    System.out.println("\nValor de Etiqueta");
+    double valor=input.nextDouble();
+    
+    
+    
+    System.out.println("\n ESCOLHA FORMA DE PAGAMENTO:");
+    
+    System.out.println("\n 1 - A vista em dinheiro ou cheque, recebe 10% de desconto");
+    System.out.println("\n 2 - A vista no cartao de credito, recebe 15% de desconto");
+    System.out.println("\n 3 - Em duas vezes, preco normal de etiqueta sem juros");
+    System.out.println("\n 4 - Em duas vezes, preco normal de etiqueta mais juros de 10%");
+
+    int op = input.nextInt();
+
+    System.out.println("\n1 VALOR TOTAL DE PRODUTO: R$ ");
+
+    if (op==1){    System.out.println(valor*0.9);}
+    else if (op==2){    System.out.println(valor*0.85);}
+    else if (op==3){    System.out.println(valor);}
+    else if (op==4){    System.out.println(valor*1.1);}
+}
+
+}
+
+//___________________________________________________________________________________________
+
+/*
+4) O cardápio de uma casa de lanches é dado pela tabela abaixo:
+Escreva um algoritmo que leia o código do item adquirido pelo consumidor e a
+quantidade, calculando e mostrando o valor a pagar. Não será necessário exibir o produto
+e o valor, somente o valor final.
+Estruturas de repetição.
+*/
+
+import java.util.Scanner;
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);		
+
+    double valor=0;
+    
+    
+    System.out.println("\n ESCOLHA O PRODUTO:");
+
+    System.out.println("\n 100 - Catioro Quiente");
+    System.out.println("\n 101 - Bauru Simples");
+    System.out.println("\n 102 - Bauru com Egg");
+    System.out.println("\n 103 - Hamburger");
+    System.out.println("\n 104 - Cheeseburger");
+    System.out.println("\n 104 - Refrigerante");
+
+    int op = input.nextInt();
+
+    System.out.println("\n DIGITE A QUANTIDADE:");
+    
+    int quant = input.nextInt();
+
+    System.out.println("\n VALOR TOTAL:");
+
+    if      (op==100){    valor=1.7;}
+    else if (op==101){    valor=2.3;}
+    else if (op==102){    valor=2.6;}
+    else if (op==103){    valor=2.4;}
+    else if (op==104){    valor=2.5;}
+    else if (op==105){    valor=1.0;}    
+    
+    System.out.println("R$ "+valor*quant);
+}
+
+}
+
+
+//___________________________________________________________________________________________
+
+//5) Construa um algoritmo que imprima todos os números ímpares até o 100.
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+
+    int count=0;
+    for (count=1;count<=100;count=count+2){    System.out.println(count);}
+
+	   
+}
+
+}
+
+//___________________________________________________________________________________________
+
+//6) Faça um programa que some todos os seguintes números: 1+ 1
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+
+    int count=0;
+    double sum=0;
+    for (count=1;count<=100;count=count+2){sum=sum+1/(count);}
+    System.out.println(sum);
+	   
+}
+
+}
+
+//___________________________________________________________________________________________
+
+/*
+7) Faça um algoritmo que estando em um loop infinito peça que o usuário digite umnúmero e só saia do laço quando o usuário digitar um número negativo.
+*/
+
+import java.util.Scanner;
+
+public class Test
+
+{
+	public static void main(String[] args) {
+
+   	Scanner input = new Scanner(System.in);		
+
+	double valor=input.nextDouble();
+
+	while(true){System.out.println("8");
+if (valor<0){break;}}	
+	   
+}
+
+}
+
+//___________________________________________________________________________________________
+
+//8) Desenvolva um programa que gere aleatoriamente os seis números da mega sena
+import java.util.Random;
+
+public class Desafio
+
+{
+	public static void main(String[] args) {
+
+    Random aleatorio = new Random();
+    
+    int n1=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n1);
+    
+    int n2=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n2);
+    
+    int n3=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n3);
+
+    int n4=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n4);    
+    
+    int n5=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n5);    
+
+    int n6=Math.abs(aleatorio.nextInt(9));
+    String.valueOf(n6);
+    
+    System.out.println(n1+""+n2+""+n3+""+n4+""+n5+""+n6);
+	
+}
+
+}
