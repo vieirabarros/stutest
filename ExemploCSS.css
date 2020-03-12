@@ -1,0 +1,31 @@
+  h1 {
+    color: white;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+
+  #objeto1 {
+    width: 10%;
+    height: 40%;
+    background-color: green;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+
+  @keyframes example {
+    from {
+      color: red;
+    }
+
+    to {
+      color: yellow;
+      transform: rotate(360deg);
+    }
+  }
+
+  body {
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+  }
